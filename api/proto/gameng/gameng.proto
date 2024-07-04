@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package gameng;
 
-option go_package = "quibex.gameng.v1;gamengv1";
+option go_package = "engmem.gameng.v1;gamengv1";
 
 service Gameng {
   // Для получения новых 4 слов для пользователя
@@ -27,7 +27,7 @@ service Gameng {
 }
 
 message GetNewWordsRequest {
-  uint64 user_id = 1;
+  uint64 chat_id = 1;
 }
 
 message GetNewWordsResponse {
