@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package wordbox;
+
+option go_package = "engmem.wordbox.v0.2;wordboxv0_2";
+
+service Wordbox {
+  // To add new words to learn
+  rpc AddNewWords(AddNewWordsRequest) returns (AddNewWordsResponse) {}
+
+  // To get words to repeat
+  rpc GetWordsToRepeat(GetWordsToRepeatRequest) returns (GetWordsToRepeatResponse) {}
+}
+
+message AddNewWordsRequest {
+  string uuid = 1;
+  repeated string words = 2;
+}
+
+message AddNewWordsResponse {
+  map<string, string> words_translations = 1;
+}
+
+message GetWordsToRepeatRequest {
+  string uuid = 1;
+}
+
+message GetWordsToRepeatResponse {
+  map<string, string> words_translations = 1;
+}
+
+
+
+
+
