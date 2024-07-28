@@ -1,5 +1,5 @@
-# gameng-api
-gameng proto api: [gameng.proto](api/proto/wordbox.proto)
+# wordbox-api
+wordbox proto api: [wordbox.proto](api/proto/wordbox.proto)
 
 ## Go get
 ```bash
